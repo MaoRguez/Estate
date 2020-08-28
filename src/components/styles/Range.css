@@ -1,0 +1,63 @@
+.container__box {
+  margin: 0 10px 10px 10px;
+  border-bottom: 1px solid #4b5d67;
+}
+
+.propertyType {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 34% 33% 33%;
+}
+
+.propertyType h3 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+.propertyType .A {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.propertyType .T {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.propertyType .W {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+.propertyType .B {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.btn {
+  border-radius: 10px;
+  height: 36px;
+  text-align: center;
+  background-color: white;
+  border: none;
+}
+.btn:hover {
+  border: 1px solid #0028ff;
+  color: #0028ff;
+}
+
+.bedrooms .btn {
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.one, .two, .three, .four {
+  padding: 0 10px;
+}
+
+.container__box-btn{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.container__checkbox{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}

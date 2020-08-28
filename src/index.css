@@ -28,7 +28,6 @@ code {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
   margin-top: 20px;
-  background: grey;
 }
 
 .container__main {

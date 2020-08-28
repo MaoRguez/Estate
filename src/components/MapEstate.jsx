@@ -8,11 +8,7 @@ import {
   Marker,
   InfoWindow
 } from 'react-google-maps';
-
-import { IoIosBed } from "react-icons/io";
-import { FaBath, FaSign } from "react-icons/fa";
-import { GiVikingLonghouse } from "react-icons/gi";
-
+import Apartment from './Apartment';
 
 const MapEstate = (props) => {
   const { products } = props;
@@ -43,41 +39,11 @@ const MapEstate = (props) => {
         onCloseClick={() => {
           setSelectedProduct(null);
         }}
-        icon={{
-          url: "../../public/pinboard.svg",
-          scaledSize: new window.google.maps.Size(25, 25)
-        }}
       >
-        <div className="Products-item">
-          <img src={selectedProduct.image} alt={selectedProduct.title} />
-          <div className="Products-item-info">
-            <h3>
-              <i><GiVikingLonghouse /></i>
-              {selectedProduct.title}
-            </h3>
-            <p>
-              {selectedProduct.description}
-            </p>
-            <div className="Products-item-span">
-              <span>
-                <i><IoIosBed /></i>
-                {selectedProduct.beds} Beds
-              </span>
-              <span>
-                <i><FaBath /></i>
-                {selectedProduct.baths} Baths
-              </span>
-              <span>
-                <i><FaSign /></i>
-                {selectedProduct.sqft} Sqft
-              </span>
-            </div>
-            <div className="Products-item-price">
-              <span className="title">Per Month: </span>
-              <span className="price">${selectedProduct.perMonth}</span>
-            </div>
-          </div>
-        </div>
+        <Apartment
+          key={selectedProduct.id}
+          product={selectedProduct}
+        />
       </InfoWindow>
     )}
     </GoogleMap>
